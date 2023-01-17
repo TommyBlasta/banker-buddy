@@ -40,8 +40,8 @@ namespace BankerBuddy
         private static void ConfigureDependencyInjection(IServiceCollection services) 
         {
             services.AddScoped<IUserResolver, BasicUserResolver>();
-            services.AddScoped<IFileWriter, FileWriter>();
-
+            services.AddScoped<IFileWriter, FileHandler>();
+            services.AddScoped<FilePathResolver>();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace BankerBuddy.Options
+﻿namespace BankerBuddy.Core.Options
 {
     public class UploadOptions
     {

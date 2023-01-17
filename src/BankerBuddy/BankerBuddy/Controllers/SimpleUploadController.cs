@@ -23,10 +23,17 @@ namespace BankerBuddy.Controllers
         {
             var currentUser = await userResolver.GetUser(cancellationToken);
 
+            //The user resolver now doesn't really return the user, so it can be specified in the upload metadata for now.
+            if(uploadFile.UserGuid != null)
+            {
+                currentUser.UserGuid = uploadFile.UserGuid.Value;
+            }
+
             using var destinationFileStream = fileWriter.GetFileStream(new Core.FileModel.SaveableFile()
             {
                 FileName = uploadFile.FormFile.FileName,
-                FileType = uploadFile.FileType
+                FileType = uploadFile.FileType,
+                FileIdentifier = Guid.NewGuid()
             }, currentUser);
 
             await uploadFile.FormFile.CopyToAsync(destinationFileStream, cancellationToken);

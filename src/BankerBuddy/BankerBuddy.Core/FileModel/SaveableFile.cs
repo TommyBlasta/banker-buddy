@@ -8,6 +8,7 @@ namespace BankerBuddy.Core.FileModel
 {
     public class SaveableFile
     {
+        public Guid FileIdentifier { get; set; }
         public string FileName { get; set; } = null!;
         public string FileType { get; set; } = null!;    
     }
