@@ -1,4 +1,4 @@
-﻿using BankerBuddy.Core.Files;
+﻿using BankerBuddy.Core.FileModel;
 using BankerBuddy.Core.User;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;

@@ -23,7 +23,7 @@ namespace BankerBuddy.Controllers
         {
             var currentUser = await userResolver.GetUser(cancellationToken);
 
-            using var destinationFileStream = fileWriter.GetFileStream(new Core.Files.SaveableFile()
+            using var destinationFileStream = fileWriter.GetFileStream(new Core.FileModel.SaveableFile()
             {
                 FileName = uploadFile.FormFile.FileName,
                 FileType = uploadFile.FileType
