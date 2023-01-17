@@ -33,7 +33,7 @@ namespace BankerBuddy.Core.CSV
 
         private static async Task<List<Model.Transaction>> GetTransactions(StreamReader fileStreamReader, CancellationToken cancellationToken)
         {
-            //This should read the transaction from the .csv file
+            //This should read the transaction from the given .csv file
             return new List<Model.Transaction>()
             {
                 //TODO
